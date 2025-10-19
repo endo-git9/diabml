@@ -1,0 +1,35 @@
+# ====================================================
+# Diabetes Ensemble Model - Configuration File
+# Author    : Endo Kersandona
+# NIM       : 01679250004
+# Supervisor: Dr. Benny Hardjono
+# Program   : Master of Informatics
+# University: Universitas Pelita Harapan
+# ====================================================
+
+# ----------------------------------------------------
+# Dataset Configuration
+# ----------------------------------------------------
+dataset_path: "pimaindians_dataset.csv"
+
+# ----------------------------------------------------
+# Data Splitting Parameters
+# ----------------------------------------------------
+test_size: 0.3              # 30% of data for testing
+calibration_split: 0.2      # 20% of training data for calibration
+random_seed: 42             # ensures reproducibility
+
+# ----------------------------------------------------
+# Model Ensemble Parameters
+# ----------------------------------------------------
+ensemble_weights: [0.4, 0.4, 0.2]   # [SVM, XGBoost, Logistic Regression]
+threshold: 0.4                      # classification threshold
+
+# ----------------------------------------------------
+# Metadata for Reporting
+# ----------------------------------------------------
+author_name: "Endo Kersandona"
+nim: "01679250004"
+supervisor: "Dr. Benny Hardjono"
+program: "Master of Informatics"
+university: "Universitas Pelita Harapan"
