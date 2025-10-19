@@ -5,11 +5,11 @@ import json
 import numpy as np
 
 def ensure_dir(path):
-    """Pastikan direktori tersedia, kalau belum maka buat."""
+
     os.makedirs(path, exist_ok=True)
 
 def save_json(obj, path):
-    """Simpan objek Python dalam format JSON (konversi otomatis NumPy dan tipe lain)."""
+
     def convert(o):
         # primitive numpy -> python
         if isinstance(o, (np.integer, np.floating, np.bool_)):
