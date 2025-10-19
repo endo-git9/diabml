@@ -4,8 +4,6 @@ Diabetes Ensemble Model Trainer & Evaluator (Final Version)
 ===========================================================
 - Modular, reliable, and fully reproducible pipeline.
 - Trains, calibrates, ensembles, and evaluates model.
-- Generates all visualizations and SHAP interpretability PNGs.
-"""
 
 import os
 import sys
