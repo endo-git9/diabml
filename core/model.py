@@ -27,7 +27,7 @@ class XGBClassifierWrapper(BaseEstimator, ClassifierMixin):
 
     def __init__(self, model):
         self.model = model
-        # copy atribut fitted bila model sudah dilatih
+        # copy atribut fitted
         if hasattr(model, "classes_"):
             self.classes_ = model.classes_
         if hasattr(model, "n_features_in_"):
@@ -94,7 +94,7 @@ def train_base_models(X_train, y_train):
 def calibrate_models(svm, xgb, log, X_calib, y_calib):
     print("[INFO] Calibrating base models...")
     try:
-        # Bungkus XGBoost agar dikenali sklearn sebagai classifier
+        # XGBoost classifier
         xgb_wrapped = XGBClassifierWrapper(xgb)
 
         cal_svm = CalibratedClassifierCV(svm, method="sigmoid", cv="prefit").fit(X_calib, y_calib)
