@@ -4,7 +4,7 @@ echo Diabetes Ensemble Training & Report Generation
 echo =======================================================
 echo.
 
-:: Step 1 - Train model & generate visualizations (including SHAP)
+:: Train model & generate visualizations
 echo [1/2] Running model training...
 python -B -m examples.train_diabetes
 if %errorlevel% neq 0 (
