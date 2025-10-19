@@ -2,8 +2,7 @@
 core/model.py
 =========================
 Final Fix:
-- Compatible dengan scikit-learn >= 1.5 dan XGBoost >= 2.0
-- Pastikan XGBClassifierWrapper terdeteksi sebagai classifier oleh sklearn
+- scikit-learn >= 1.5 dan XGBoost >= 2.0
 """
 
 import warnings
@@ -23,10 +22,7 @@ from sklearn.utils.validation import check_is_fitted
 # WRAPPER FIX (Explicit classifier identity)
 # ============================================================
 class XGBClassifierWrapper(BaseEstimator, ClassifierMixin):
-    """
-    Wrapper untuk XGBClassifier agar dikenali sklearn sebagai classifier,
-    bukan regressor, saat digunakan dengan CalibratedClassifierCV.
-    """
+    
     _estimator_type = "classifier"
 
     def __init__(self, model):
@@ -38,7 +34,7 @@ class XGBClassifierWrapper(BaseEstimator, ClassifierMixin):
             self.n_features_in_ = model.n_features_in_
 
     def fit(self, X, y):
-        """Wrapper tidak melakukan training lagi, hanya memastikan atribut ada."""
+      
         if hasattr(self.model, "classes_"):
             self.classes_ = self.model.classes_
         else:
