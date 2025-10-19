@@ -27,7 +27,7 @@ class XGBClassifierWrapper(BaseEstimator, ClassifierMixin):
     Wrapper untuk XGBClassifier agar dikenali sklearn sebagai classifier,
     bukan regressor, saat digunakan dengan CalibratedClassifierCV.
     """
-    _estimator_type = "classifier"  # ✅ penting agar sklearn mengenalinya
+    _estimator_type = "classifier"
 
     def __init__(self, model):
         self.model = model
