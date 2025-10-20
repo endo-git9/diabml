@@ -1,0 +1,6 @@
+Video ini menampilkan demo fungsional yang menunjukkan bagaimana sistem bekerja mulai dari proses inputt-data, pemrosesan model, hingga visualisasi hasil akhir.
+Fitur utama yang ditunjukkan dalam video
+Tampilan Antarmuka & Alur Kerja: menjelaskan bagaimana pengguna berinteraksi dengan aplikasi.
+Proses Pemrosesan Data: memperlihatkan tahap preprocessing dan penerapan model (misalnya Ensemble Learning).
+Evaluasi Model & Visualisasi: menampilkan metrik performa seperti akurasi, ROC-AUC, dan kurva kalibrasi.
+Output Akhir: hasil prediksi atau rekomendasi sistem ditampilkan dengan visualisasi yang mudah dipahami.
